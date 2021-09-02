@@ -8,7 +8,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
     }
     &__logo-text {
         font-size: 36px;
@@ -190,6 +190,42 @@
                 left: -13px;
             }
         }
+    }
+}
+
+.top-slider {
+    &__inner {
+        background-image: url(../images/top-slider/bg.png);
+        padding: 230px 270px;
+    }
+    &__content {
+        display: block;
+        text-align: left;
+    }
+    &__title {
+        @extend %rubik-500;
+        color: #243f4d;
+        font-size: 72px;
+        line-height: 70px;
+        margin-bottom: 38px;
+    }
+    &__suptitle {
+        @extend %rubik-400;
+        font-size: 18px;
+        line-height: 30px;
+        color: $accent;
+        max-width: 370px;
+        margin-bottom: 38px;
+    }
+    &__btn {
+        @extend %btn;
+    }
+    &__item {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 

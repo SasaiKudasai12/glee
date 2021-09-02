@@ -25,3 +25,16 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+%btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #a3bbc8;
+    @extend %rubik-500;
+    color: #fff;
+    font-size: 15px;
+    line-height: 12px;
+    width: 200px;
+    height: 60px;
+}
