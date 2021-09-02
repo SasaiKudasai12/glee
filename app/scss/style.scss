@@ -3,4 +3,17 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
+.header {
+    &__inner {
+        display: flex;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 42px;
+}
+
 @import 'media';
