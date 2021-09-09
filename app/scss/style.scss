@@ -332,6 +332,202 @@
     }
 }
 
+.product {
+    padding: 75px 0 120px;
+    /* .product__title */
+    &__title {
+        @extend %dmsans-700;
+        font-size: 36px;
+        text-align: center;
+    }
+    /* .product__filter-btn */
+    &__filter-btn {
+        text-align: center;
+        margin-top: 35px;
+        @extend %dmsans-700;
+        font-size: 16px;
+        margin-bottom: 80px;
+    }
+    /* .product__btn */
+    &__btn {
+        border: none;
+        background-color: #fff;
+        opacity: 0.4;
+    }
+    &__btn--active {
+        opacity: 1;
+    }
+    &__btn+.product__btn {
+        margin-left: 30px;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
+    /* .product__content-item */
+    &__content-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        max-width: 270px;
+        height: 380px;
+    }
+    &__img-box {
+        position: relative;
+        overflow: hidden;
+        max-width: 260px;
+        height: 260px;
+        z-index: 1;
+        &:hover {
+            .product__link-box {
+                transform: translateY(0%);
+            }
+        }
+    }
+    &__img {
+        margin-top: 20px;
+        object-fit: cover;
+        max-height: 170px;
+    }
+    /* .product__link-box */
+    &__link-box {
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 200px;
+        z-index: 5;
+        transform: translateY(400%);
+        transition: all .3s;
+    }
+    /* .product__link */
+    &__link {
+        position: relative;
+        z-index: 10;
+        margin: 0 15px;
+        path {
+            transition: all .3s;
+        }
+        &::before {
+            content: '';
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+            position: absolute;
+            bottom: -3px;
+            right: -8px;
+            z-index: -1;
+        }
+    }
+    &__link:hover {
+        path {
+            fill: #fff;
+        }
+        &::before {
+            background-color: #a3bbc8;
+        }
+    }
+    &__name {
+        @extend %dmsans-500;
+        margin-top: auto;
+        color: #243f4d;
+        font-size: 16px;
+        line-height: 40px;
+    }
+    /* .product__price */
+    &__price {
+        margin-bottom: 30px;
+        @extend %dmsans-700;
+        font-size: 16px;
+        line-height: 40px;
+        color: #a3bbc8;
+    }
+}
+
+.lamp {
+    padding: 50px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    /* .lamp__left */
+    &__left {
+        background-color: #feefe2;
+        max-width: 740px;
+        width: 100%;
+        display: flex;
+        padding: 90px 0;
+        position: relative;
+    }
+    /* .lamp__left-img */
+    &__left-img {
+        position: absolute;
+        left: 88px;
+        top: -95px;
+    }
+    /* .lamp__content */
+    &__content {
+        color: #243f4d;
+        max-width: 405px;
+        margin-left: auto;
+    }
+    /* .lamp__title */
+    &__title {
+        @extend %dmsans-700;
+        font-size: 26px;
+        line-height: 32px;
+    }
+    /* .lamp__descript */
+    &__descript {
+        margin-top: 30px;
+        @extend %rubik-400;
+        line-height: 30px;
+        font-size: 16px;
+    }
+    /* .lamp__btn */
+    &__btn {
+        @extend %btn;
+        margin-top: 35px;
+        border-radius: 10px;
+        position: relative;
+        background-color: #feefe2;
+        border: 1px solid #436372;
+        color: #436372;
+        &::after {
+            content: '';
+            background-image: url('../images/btn-copy.svg');
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 23px;
+            height: 13px;
+            top: 27px;
+            right: 3px;
+        }
+    }
+    &__right {
+        background-color: #feefe2;
+        max-width: 740px;
+        width: 100%;
+        display: flex;
+        position: relative;
+        padding: 90px 0;
+    }
+    /* .lamp__right-img */
+    &__right-img {
+        position: absolute;
+        left: 81px;
+        top: -90px;
+    }
+}
+
 .video {
     padding: 185px 0;
     background-image: url('../images/video-bg.jpg');
