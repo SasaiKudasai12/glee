@@ -28,7 +28,8 @@ body {
 
 %btn {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-left: 25px;
     align-items: center;
     background-color: #a3bbc8;
     @extend %rubik-500;
