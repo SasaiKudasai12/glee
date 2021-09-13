@@ -1,4 +1,10 @@
 $(function () {
+
+  $(".filter-price__input").ionRangeSlider({
+    type: "double",
+    prefix: "$"
+  });
+
   $('.top-slider__inner').slick({
     dots: true,
     arrows: false,
@@ -7,8 +13,8 @@ $(function () {
     autoplaySpeed: 3000
   });
 
-  $(".star").rateYo({
-    rating: 3.6,
+  $(".filter-recent__star").rateYo({
+    rating: 4,
     starWidth: "17px",
     normalFill: "#ccccce"
   });
