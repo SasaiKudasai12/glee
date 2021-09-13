@@ -32,3 +32,25 @@ $mc: #7b7b7b;
     font-family: 'Rubik-Light', sans-serif;
     font-weight: 300;
 }
+
+%btn {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    align-items: center;
+    background-color: #a3bbc8;
+    @extend %rubik-500;
+    color: #fff;
+    font-size: 15px;
+    line-height: 12px;
+    width: 200px;
+    height: 60px;
+}
+
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
