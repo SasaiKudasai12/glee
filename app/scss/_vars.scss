@@ -3,6 +3,7 @@ $default: #8b8b8b;
 $title: #1a1a1a;
 $bg: #fef7f0;
 $mc: #7b7b7b;
+
 %dmsans-400 {
     font-family: 'DMSans-Regular', sans-serif;
     font-weight: 400;
@@ -26,4 +27,31 @@ $mc: #7b7b7b;
 %rubik-500 {
     font-family: 'Rubik-Medium', sans-serif;
     font-weight: 500;
+}
+
+%rubik-300 {
+    font-family: 'Rubik-Light', sans-serif;
+    font-weight: 300;
+}
+
+%btn {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    align-items: center;
+    background-color: #a3bbc8;
+    @extend %rubik-500;
+    color: #fff;
+    font-size: 15px;
+    line-height: 12px;
+    width: 200px;
+    height: 60px;
+}
+
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
