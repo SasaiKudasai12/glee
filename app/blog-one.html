@@ -255,11 +255,20 @@
                 <h4 class="form-comment__title">Leave A Comment</h4>
                 <form class="form-comment__form" action="#">
                   <div class="form-comment__inputs">
-                    <input type="text" class="form-comment__input form-comment__input--user" placeholder="Name" >
-                    <input type="text" class="form-comment__input form-comment__input--email" placeholder="youremail@gmail.com">
-                  </div>
 
-                  <textarea class="form-comment__textarea" placeholder="Comment"></textarea>
+                    <label class="form-comment__label form-comment__label--user">
+                      <input type="text" class="form-comment__input" placeholder="Name" >
+                    </label>
+
+                    <label class="form-comment__label form-comment__label--mail">
+                        <input type="text" class="form-comment__input" placeholder="youremail@gmail.com">
+                    </label>
+                  
+                  </div>
+                  <label class="form-comment__label form-comment__label--textarea">
+                     <textarea class="form-comment__textarea" placeholder="Comment"></textarea>
+                  </label>
+                 
                   <button class="form-comment__btn">
                     Post Comment
                   </button>
