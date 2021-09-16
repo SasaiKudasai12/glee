@@ -62,6 +62,7 @@ $(function () {
   $(".filter-recent__star").rateYo({
     rating: 4,
     starWidth: "17px",
-    normalFill: "#ccccce"
+    normalFill: "#ccccce",
+    readOnly: true
   });
 });
