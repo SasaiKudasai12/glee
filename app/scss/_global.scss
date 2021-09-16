@@ -60,6 +60,29 @@ body {
     }
   }
 }
+.pagination {
+  @extend %rubik-400;
+  padding: 70px 0 120px;
+  margin: 0 auto;
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+  &.pagination--list{
+    margin: 0;
+  }
+		/* .pagination__link */
+		&__link {
+      padding: 15px 19px;
+      border: 1px solid #a3bbc8;
+      line-height: 1;
+      color: #243f4d;
+      &.pagination__link--active{
+      color: #fff;
+      background-color: #a3bbc8;
+    }
+		}
+}
+
 .jq-ry-container {
   margin: 5px 0;
   padding: 0;
