@@ -1,0 +1,118 @@
+.blog {
+  position: relative;
+  padding: 100px 0 40px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  /* .blog__title */
+  &__title {
+    @extend %dmsans-700;
+    font-size: 36px;
+  }
+  &__link {
+    @extend %dmsans-700;
+    font-size: 16px;
+  }
+  /* .blog__content-items */
+  &__content-items {
+    display: flex;
+    justify-content: space-between;
+    z-index: 11;
+  }
+  /* .blog__content-item */
+  &__content-item {
+    max-width: 370px;
+    min-height: 420px;
+    position: relative;
+    margin-bottom: 88px;
+    z-index: 12;
+    background-color: #fff;
+    border-radius: 2px;
+    &::after {
+      border-radius: 29px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      content: "NEWS";
+      color: #ffff;
+      position: absolute;
+      background-color: rgb(163, 187, 200);
+      position: absolute;
+      left: 27px;
+      top: 238px;
+      width: 103px;
+      height: 30px;
+      z-index: 6;
+    }
+  }
+  /* .blog__img */
+  &__img {
+    object-fit: cover;
+    height: 250px;
+    width: 370px;
+  }
+  /* .blog__text */
+  &__text {
+    @extend %dmsans-500;
+    font-size: 18px;
+    margin: 25px 25px 0 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+  }
+  /* .blog__author-info */
+  &__author-info {
+    display: flex;
+    @extend %rubik-400;
+    font-size: 12px;
+    padding: 15px 0;
+    margin-left: 47px;
+  }
+  /* .blog__date */
+  &__date {
+    position: relative;
+    margin-right: 42px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 17px;
+      height: 17px;
+      background-color: #000;
+      left: -20px;
+      top: 4px;
+      background-image: url("../images/blog/calendar.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  &__author {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 17px;
+      height: 17px;
+      background-color: #000;
+      left: -20px;
+      top: 4px;
+      background-image: url("../images/blog/user.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  &__partners-bg {
+    position: absolute;
+    height: 430px;
+    width: 100%;
+    background-color: $bg;
+    right: 0;
+    bottom: -23px;
+    z-index: -1;
+  }
+  &__partner-list {
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+  }
+}
