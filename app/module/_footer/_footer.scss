@@ -83,3 +83,51 @@
     }
   }
 }
+
+@media (max-width: 950px) {
+  .footer-top {
+    flex-wrap: wrap;
+  }
+  .footer-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer {
+    .footer-top {
+      padding: 20px 0;
+    }
+    .footer-bot {
+      padding: 15px 0;
+    }
+  }
+  .footer-nav {
+    width: 50%;
+    padding-right: 10px;
+  }
+  .footer-form {
+    width: 50%;
+  }
+  .footer-bot {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-bot__copy {
+    width: 100%;
+    display: block;
+  }
+  .footer-top__form {
+    flex-direction: column;
+  }
+  .footer-form {
+    width: 50%;
+  }
+  .footer-services {
+    width: 50%;
+  }
+  .footer-contact {
+    width: 50%;
+    padding-right: 10px;
+  }
+}

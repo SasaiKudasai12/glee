@@ -1,7 +1,13 @@
 $(function () {
 
+  $('.footer-top__title ').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass('active');
+  })
 
-  
+  $('.user-nav__link-burger').on('click', function () {
+    $('.header__nav-menu').toggleClass('header__nav-menu--active')
+  });
 
   $('.shop-content__filter-btn').on('click', function () {
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');

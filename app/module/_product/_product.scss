@@ -9,6 +9,10 @@
   &__content-new {
     display: none;
   }
+  &__img {
+    object-fit: cover;
+    margin-top: 20px;
+  }
   /* .product__filter-btn */
   &__filter-btn {
     text-align: center;
@@ -39,10 +43,9 @@
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    max-width: 270px;
-    height: 370px;
-    margin: 30px 20px;
+    min-width: 270px;
     text-align: center;
+    padding: 15px 30px;
     &.product__content-item--list {
       min-width: 100%;
       text-align: left;
@@ -121,6 +124,9 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    img{
+      object-fit: cover;
+    }
     min-height: 270px;
     &:hover {
       .product__link-box {
@@ -130,7 +136,11 @@
   }
   /* .product__link-box */
   &__link-box {
-    width: 220px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 5;
     transform: translateY(400%);
     transition: all 0.3s;
@@ -141,6 +151,7 @@
     z-index: 10;
     margin: 0 15px;
     path {
+      fill: #a3bbc8;
       transition: all 0.3s;
     }
     &::before {
@@ -151,9 +162,10 @@
       background-color: #fff;
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
       position: absolute;
-      bottom: -3px;
-      right: -8px;
+      top: 50%;
+      right: -10px;
       z-index: -1;
+      transform: translateY(-65%);
     }
   }
   &__link:hover {
@@ -178,5 +190,54 @@
     font-size: 16px;
     line-height: 40px;
     color: #a3bbc8;
+  }
+}
+
+@media (max-width: 1200px) {
+  .product {
+    &__content {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    &__content-item {
+      padding: 15px 60px;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .product {
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      grid-gap: 10px;
+    }
+    &__content-item {
+      min-width: 250px;
+  
+    }
+    
+  }
+}
+@media (max-width: 550px) {
+  .product {
+    padding: 40px 0;
+    &__title {
+      font-size: 26px;
+    }
+    &__btn {
+      font-size: 12px;
+    }
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+      grid-gap: 10px;
+    }
+    &__content-item {
+      width: 100%;
+    }
+    &__btn + .product__btn {
+      margin-left: 10px;
+      padding: 0;
+    }
   }
 }

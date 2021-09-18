@@ -99,7 +99,8 @@ body {
   display: none;
 }
 .logo {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   width: 136px;
   height: 42px;
   .header__logo-text {
