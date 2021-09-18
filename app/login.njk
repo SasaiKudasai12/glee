@@ -6,22 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/login.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Document</title>
 </head>
 
 <body>
  {% include 'app/module/_header/_header.html' %}
   <main class="main">
+    {% include 'app/module/_top-nav/_top-nav.html' %}
     <section class="login">
-      <div class="top-nav">
-        <h4 class="title">
-          Log in
-        </h4>
-        <div class="breadcrumbs">
-          <a href="index.html" class="breadcrumbs__links">Home</a>
-          <a href="login.html" class="breadcrumbs__links">Log in</a>
-        </div>
-      </div>
       <form class="login__form" action="#">
         <label class="login__label">
           Username or email address *

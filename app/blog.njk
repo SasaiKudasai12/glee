@@ -6,22 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/blog.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Document</title>
 </head>
 
 <body>
   {% include 'app/module/_header/_header.html' %}
   <main class="main">
+    {% include 'app/module/_top-nav/_top-nav.html' %}
     <section class="blog-page">
-      <div class="top-nav">
-        <h4 class="title">
-          Blog 
-        </h4>
-        <div class="breadcrumbs">
-          <a href="index.html" class="breadcrumbs__links">Home</a>
-          <a href="blog.html" class="breadcrumbs__links">Blog</a>          
-        </div>
-      </div>
 
       <div class="container-wrapper">
         <div class="blog-page__inner">
