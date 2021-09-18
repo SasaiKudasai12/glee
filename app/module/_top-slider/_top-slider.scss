@@ -1,0 +1,211 @@
+.top-slider {
+  &__inner {
+    background-image: url("../images/top-slider/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 215px 0 45px 0;
+  }
+  /* .top-slider__item */
+  &__item {
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-end;
+    align-items: center;
+  }
+  /* .top-slider__content */
+  &__content {
+    padding-left: 20px;
+    max-width: 450px;
+  }
+  /* .top-slider__title */
+  &__title {
+    @extend %rubik-500;
+    color: #243f4d;
+    font-size: 72px;
+    line-height: 70px;
+    margin-bottom: 38px;
+    text-transform: uppercase;
+  }
+  /* .top-slider__text */
+  &__text {
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $accent;
+    max-width: 370px;
+    margin-bottom: 38px;
+  }
+  &__btn {
+    @extend %btn;
+    position: relative;
+    &::after {
+      content: "";
+      background-image: url("../images/btn2.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 23px;
+      height: 13px;
+      top: 27px;
+      right: 15px;
+    }
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  li {
+    padding: 0 8px;
+    button {
+      color: #243f4d;
+      width: 30px;
+      height: 30px;
+      font-size: 10px;
+      @extend %rubik-500;
+      background-color: rgb(255, 255, 255);
+      opacity: 0.502;
+      border: none;
+      border-radius: 50%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &.slick-active {
+      button {
+        opacity: 1;
+        background-color: #fff;
+      }
+    }
+  }
+}
+.slider-info {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fef7f0;
+  &__item {
+    padding: 45px 0 45px 215px;
+    margin-left: 10px;
+    width: 33%;
+    position: relative;
+  }
+  &__item::before {
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 55px;
+    height: 50px;
+    left: 150px;
+    top: 50px;
+  }
+  .slider__item--clock::before {
+    background-image: url("../images/top-slider/info24-icon.svg");
+  }
+  .slider__item--delivery::before {
+    background-image: url("../images/top-slider/info-track.svg");
+  }
+  .slider__item--card::before {
+    background-image: url("../images/top-slider/info3.svg");
+    height: 55px;
+  }
+  &__item &__item + .slider-info__item {
+    border-left: 1px solid #e8e4df;
+  }
+  &__title {
+    margin-right: 10px;
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 40px;
+    max-width: 200px;
+  }
+  /* .slider-info__text */
+  &__text {
+    margin-right: 10px;
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 30px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .top-slider {
+    &__inner {
+      padding-right: 20px;
+    }
+    &__img {
+      width: 60%;
+    }
+  }
+  .slider-info {
+    &__item {
+      padding-left: 60px;
+    }
+    &__item::before {
+      top: 45px;
+      left: 3px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .top-slider {
+    &__inner {
+      padding-top: 170px;
+    }
+    &__title {
+      font-size: 55px;
+      line-height: 50px;
+    }
+    color: #243f4d;
+    font-size: 55px;
+    line-height: 50px;
+    &__img {
+      width: 55%;
+    }
+  }
+  .slick-dots {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 800px) {
+  .top-slider {
+
+    &__title {
+      font-size: 55px;
+      line-height: 50px;
+    }
+    &__item {
+      .top-slider__img {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 550px) {
+  .top-slider {
+    &__title {
+      font-size: 48px;
+      line-height: 50px;
+    }
+    &__inner {
+      padding-right: 20px;
+    }
+    &__img {
+      width: 60%;
+    }
+  }
+  .slider-info {
+    flex-wrap: wrap;
+    &__item {
+      width: 100%;
+      padding-left: 60px;
+    }
+    &__item::before {
+      top: 45px;
+      left: 3px;
+    }
+  }
+}

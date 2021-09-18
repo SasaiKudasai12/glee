@@ -1,0 +1,16 @@
+@media (max-width: 1200px) {
+  .blog-page__aside {
+    display: none;
+  }
+  .filter__blog-item {
+    display: none;
+  }
+  .blog-page {
+    &__search {
+      display: block;
+    }
+  }
+  .bot-list {
+    margin: 20px;
+  }
+}
